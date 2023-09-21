@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Võ Ngọc Sơn</title>
+    <link rel="icon" href="./asssets/images/icon.ico">
+
+    <link rel="stylesheet" href="./asssets/css/base.css">
+    <link rel="stylesheet" href="./asssets/css/grid.css">
+    <link rel="stylesheet" href="./asssets/fontawesome-free-6.4.2-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script defer src="./asssets/fontawesome-free-6.4.2-web/js/all.js"></script>
+</head>
+<body>
+    <div class="app">
+        <div class="introduction">
+            <h2 class="introduction__greeting">Hello, World.</h2>
+            <h1 class="introduction__my-name">I'm Vo Ngoc Son.</h1>
+            <span class="introduction__my-major">| Front-end Developer |</span>
+            <button class="introduction__see-more">
+                More about me
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="introduction__links">
+                <a href="https://www.facebook.com/sons.vos.52" class="introduction__links--facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@sownvox" class="introduction__links--youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/vngson" class="introduction__links--github" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com/sown_vox" class="introduction__links--x-twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_sownvox/" class="introduction__links--instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="more-information">
+            <div class="container">
+                <div class="row c-3">
+                    <div class="side-bar">
+                        <div class="side-bar__avatar--wrapper">
+                            <div class="side-bar__avatar"></div>
+                            <span class="side-bar__avatar--border-top"></span>
+                            <span class="side-bar__avatar--border-right"></span>
+                            <span class="side-bar__avatar--border-bottom"></span>
+                            <span class="side-bar__avatar--border-left"></span>
+                        </div>
+                        <h3 class="side-bar__name">Vo Ngoc Son</h3>
+                        <div class="side-bar__fields">Front-end Developer</div>
+                        <ul class="side-bar__menu">
+                            <li><a href="#home" class="side-bar__menu--item">
+                                <i class="fa-solid fa-house"></i>
+                                Home
+                            </a></li>
+                            <li><a href="#about" class="side-bar__menu--item">
+                                <i class="fa-solid fa-user"></i>
+                                About Me
+                            </a></li>
+                            <li><a href="#skills" class="side-bar__menu--item">
+                                <i class="fa-solid fa-earth-asia"></i>
+                                Skills
+                            </a></li>
+                            <li><a href="#projects" class="side-bar__menu--item">
+                                <i class="fa-solid fa-diagram-project"></i>
+                                Projects
+                            </a></li>
+                            <li><a href="#contact" class="side-bar__menu--item">
+                                <i class="fa-solid fa-phone"></i>
+                                Contact
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="content__container">
+                        <div class="content__home-page" id="home">
+                            <svg class="content__home-page--full-name__wrapper">
+                                <symbol class="content__home-page--full-name" id="s-text">
+                                  <text text-anchor="middle" x="50%" y="80%">Vo Ngoc Son</text>
+                                </symbol>
+                            
+                                <g class = "g-ants">
+                                  <use xlink:href="#s-text" class="text-copy"></use>
+                                  <use xlink:href="#s-text" class="text-copy"></use>
+                                  <use xlink:href="#s-text" class="text-copy"></use>
+                                  <use xlink:href="#s-text" class="text-copy"></use>
+                                  <use xlink:href="#s-text" class="text-copy"></use>
+                                </g>
+                              </svg>
+                            <span class="content__home-page--introduction">I'm web developer</span>
+                            <a  href="./asssets/[CV] - Vo Ngoc Son - Frontend Developer (Interns).pdf" class="content__home-page--btn-download-cv" download>
+                                Download CV
+                                <i class="fa-solid fa-circle-arrow-down"></i>
+                            </a>                     
+                        </div>
+                        <div class="content__about-page" id="about"></div>
+                        <div class="content__skils-page" id="skills"></div>
+                        <div class="content__projects-page" id="projects"></div>
+                        <div class="content__contact-page" id="contact"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
