@@ -11,52 +11,52 @@ var handleClickSeeMore = function () {
 }
 
 // Hàm gửi email
-function sendEmail() {
-  // Lấy dữ liệu từ các ô nhập liệu
-  var nameInput = document.getElementsByName("name")[0].value;
-  var emailInput = document.getElementsByName("email")[0].value;
-  var messageInput = document.getElementsByName("message")[0].value;
+// function sendEmail() {
+//   // Lấy dữ liệu từ các ô nhập liệu
+//   var nameInput = document.getElementsByName("name")[0].value;
+//   var emailInput = document.getElementsByName("email")[0].value;
+//   var messageInput = document.getElementsByName("message")[0].value;
 
-  // Thiết lập thông tin SMTP
-  const smtpConfig = {
-    host: "smtp.gmail.com",
-    port: 587,
-    username: "sonvo1611@gmail.com",
-    password: "Sonkb12102002",
-  };
+//   // Thiết lập thông tin SMTP
+//   const smtpConfig = {
+//     host: "smtp.gmail.com",
+//     port: 587,
+//     username: "sonvo1611@gmail.com",
+//     password: "Sonkb12102002",
+//   };
 
-  // Tạo đối tượng Email
-  const emailObj = new Email({
-    from: "sonvo1611@gmail.com",
-    to: "sonvo1611@gmail.com",
-    subject: "Thông báo từ trang web",
-    message: `
-      Tên: ${nameInput}
-      Email: ${emailInput}
-      Nội dung: ${messageInput}
-    `,
-  });
+//   // Tạo đối tượng Email
+//   const emailObj = new Email({
+//     from: "sonvo1611@gmail.com",
+//     to: "sonvo1611@gmail.com",
+//     subject: "Thông báo từ trang web",
+//     message: `
+//       Tên: ${nameInput}
+//       Email: ${emailInput}
+//       Nội dung: ${messageInput}
+//     `,
+//   });
 
-  // Gửi email
-  emailObj.send(smtpConfig);
+//   // Gửi email
+//   emailObj.send(smtpConfig);
 
-  // Tạo đối tượng Email xác nhận
-  const emailObjConfirm = new Email({
-    from: "sonvo1611@gmail.com",
-    to: emailInput,
-    subject: "Xác nhận nhận được message",
-    message: `
-      Chào bạn,
+//   // Tạo đối tượng Email xác nhận
+//   const emailObjConfirm = new Email({
+//     from: "sonvo1611@gmail.com",
+//     to: emailInput,
+//     subject: "Xác nhận nhận được message",
+//     message: `
+//       Chào bạn,
 
-      Chúng tôi đã nhận được message của bạn. Chúng tôi sẽ phản hồi sớm nhất có thể.
+//       Chúng tôi đã nhận được message của bạn. Chúng tôi sẽ phản hồi sớm nhất có thể.
 
-      Cảm ơn bạn!
-    `,
-  });
+//       Cảm ơn bạn!
+//     `,
+//   });
 
-  // Gửi email xác nhận
-  emailObjConfirm.send(smtpConfig);
-}
+//   // Gửi email xác nhận
+//   emailObjConfirm.send(smtpConfig);
+// }
 
 // var sendEmail = function() {
 //     var nameInput = document.getElementsByName("name")[0].value;
