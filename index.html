@@ -87,7 +87,7 @@
                                 </g>
                             </svg>
                             <span class="content__home-page--introduction">I'm web developer.</span>
-                            <a  href="./assets/[CV] - Vo Ngoc Son - Frontend Developer.pdf" class="content__home-page--btn-download-cv" download>
+                            <a  href="./assets/[CV] - Vo Ngoc Son.pdf" class="content__home-page--btn-download-cv" download>
                                 Download CV
                                 <i class="fa-solid fa-circle-arrow-down"></i>
                             </a>                     
@@ -160,9 +160,9 @@
                                     <a href="https://github.com/vngson/OMRP.git" class="content__projects-page--project__view-details" target="_blank">View details</a>
                                 </div>
                                 <div class="col l-5 c-12 m-12 content__projects-page--project">
-                                    <span class="content__projects-page--project__title">Film Ticket - Book movie tickets</span>
-                                    <iframe src="https://youtube.com/embed/GHbXa8Gqcac" frameborder="0" class="content__projects-page--project__video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a href="https://github.com/NPT-DEV40/MovieBookingFrontend/tree/dev-son2" class="content__projects-page--project__view-details" target="_blank">View details</a>
+                                    <span class="content__projects-page--project__title">Vticket</span>
+                                    <iframe src="https://youtube.com/embed/EV56W73CZTM" frameborder="0" class="content__projects-page--project__video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <a href="https://github.com/vngson/vticket-web.git" class="content__projects-page--project__view-details" target="_blank">View details</a>
                                 </div>
                                 <!-- <div class="col l-5 c-12 m-12 content__projects-page--project">
                                     <span class="content__projects-page--project__title">OMRP - One million reward points</span>
@@ -211,8 +211,8 @@
                             </div>
                             <form method="post" class="content__contact-page--contact__wrapper">
                                 <div class="content__contact-page--contact">
-                                    <input name="user_name" id="user_name" type="text" class="content__contact-page--contact__input" placeholder="">
-                                    <label for="user_name" class="content__contact-page--contact__title">Name</label>
+                                    <input name="from_name" id="from_name" type="text" class="content__contact-page--contact__input" placeholder="">
+                                    <label for="from_name" class="content__contact-page--contact__title">Name</label>
                                 </div>
                                 <div class="content__contact-page--contact">
                                     <input name="email" id="email" type="text" class="content__contact-page--contact__input" placeholder="">
@@ -233,6 +233,49 @@
 </div>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/php/main.php"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("seNx6PC9PHybrMy8s");
+        })();
+    </script>
+    <script>
+        document.querySelector(".content__contact-page--contact__wrapper").addEventListener("submit", function(event) {
+            event.preventDefault(); // Ngăn chặn load lại trang
+        
+            // Lấy dữ liệu từ form
+            let from_name = document.getElementById("from_name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+        
+            // Cấu hình dữ liệu gửi đi
+            let templateParams = {
+                to_name: 'Son vo',
+                from_name: from_name,
+                email: email,
+                message: message
+            };
+        
+            // Gửi email thông qua EmailJS
+            emailjs.send("service_3ccz0h4", "template_z3dt439", templateParams)
+            .then(function(response) {
+                alert("Email sent successfully!");
+                console.log("SUCCESS!", response.status, response.text);
+                // Reload sau 2 giây
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
+            }, function(error) {
+                alert("Failed to send email!");
+                console.log("FAILED...", error);
+
+                // Reload sau 2 giây
+                setTimeout(function() {
+                    location.reload();
+                }, 2000);
+            });
+        });
+    </script>
 </body>
 </html>
 
