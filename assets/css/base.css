@@ -528,7 +528,7 @@ a{
     border-top: 2px solid var(--black);
 }
 
-.content__skills-page--skill-title, .content__skills-page--framework-title{
+.content__skills-page--skill-title, .content__skills-page--framework-title, .content__skills-page--development_tool-title{
     text-align: center;
     font-size: 4rem;
     margin: 20px auto 20px auto;
@@ -552,7 +552,7 @@ a{
     grid-row-gap: 20px;
 }
 
-.content__skills-page--framework__wrapper{
+.content__skills-page--framework__wrapper, .content__skills-page--development_tool__wrapper{
     margin: auto auto 40px auto;
     max-width: 70%;
     display: grid;
@@ -560,26 +560,30 @@ a{
     grid-row-gap: 20px;
 }
 
-.content__skills-page--skill, .content__skills-page--framework{
+.content__skills-page--skill, .content__skills-page--framework, .content__skills-page--development_tool{
     display: flex;
     flex-direction: column;
     user-select: none;
     justify-content: center;
     align-items: center;
     width: 200px;
+    text-align: center;
 }
 
-.content__skills-page--skill__img, .content__skills-page--framework__img{
+.content__skills-page--skill__img, .content__skills-page--framework__img, .content__skills-page--development_tool__img{
     --size: 40px;
     width: var(--size);
     height: var(--size);
     object-fit: contain;
 }
 
-.content__skills-page--skill__title, .content__skills-page--framework__title{
+.content__skills-page--skill__title, .content__skills-page--framework__title, .content__skills-page--development_tool__title{
     font-size: 2rem;
     margin-bottom: 10px;
     letter-spacing: 2.5px;
+    line-height: 24px;
+    height: 48px;
+
 }
 
 @keyframes animation_color {
