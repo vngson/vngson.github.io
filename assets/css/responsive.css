@@ -1,0 +1,572 @@
+/* ============================================
+   MOBILE-FIRST RESPONSIVE DESIGN
+   Breakpoints: 640px | 768px | 1024px | 1280px
+   ============================================ */
+
+/* ============================================
+   XS (< 640px) - Base styles
+   ============================================ */
+
+/* Hero Section */
+.introduction {
+  padding: var(--space-4);
+}
+
+.introduction__greeting {
+  font-size: var(--font-size-lg);
+}
+
+.introduction__my-name {
+  font-size: var(--font-size-4xl);
+}
+
+.introduction__my-major {
+  font-size: var(--font-size-lg);
+}
+
+.introduction__see-more {
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-sm);
+}
+
+/* Social Links */
+.introduction__links {
+  bottom: var(--space-6);
+}
+
+.introduction__links a .fa-brands {
+  font-size: 1.25rem;
+}
+
+/* Mobile Sidebar - Bottom Navigation */
+.side-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  min-height: 60px;
+  top: auto;
+  border-right: none;
+  border-top: 1px solid var(--border-color);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  padding: var(--space-3) var(--space-4);
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.side-bar__avatar--wrapper,
+.side-bar__name,
+.side-bar__fields {
+  display: none;
+}
+
+.side-bar__menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  gap: 0;
+}
+
+.side-bar__menu li {
+  margin-bottom: 0;
+}
+
+.side-bar__menu--item {
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-md);
+}
+
+.side-bar__menu--item i {
+  font-size: 1.25rem;
+}
+
+.side-bar__menu--item span {
+  display: none;
+}
+
+/* Content Area */
+.content {
+  margin-left: 0;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.content__page {
+  padding: var(--space-8) var(--space-4);
+}
+
+/* Page Titles */
+.content__page--title {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-8);
+}
+
+/* Home Page */
+.content__home-page {
+  padding: var(--space-10) var(--space-4);
+  padding-bottom: 100px;
+}
+
+.text-copy {
+  font-size: 2.8em;
+}
+
+/* Typing Animation - Mobile */
+.typing-text {
+  font-size: var(--font-size-lg);
+}
+
+.typing-role {
+  min-width: 140px;
+}
+
+/* Role Badges - Mobile */
+.role-badges {
+  gap: var(--space-3);
+}
+
+.role-badge {
+  font-size: var(--font-size-xs);
+  padding: var(--space-2) var(--space-3);
+}
+
+.role-badge i {
+  font-size: var(--font-size-sm);
+}
+
+/* About Page */
+.content__about-page--information {
+  font-size: var(--font-size-sm);
+}
+
+/* Skills Page */
+.content__skills-page {
+  padding: 0 var(--space-4);
+}
+
+.content__skills-page--skill-title,
+.content__skills-page--framework-title,
+.content__skills-page--development_tool-title {
+  font-size: var(--font-size-xl);
+}
+
+.content__skills-page--skill__wrapper,
+.content__skills-page--framework__wrapper,
+.content__skills-page--development_tool__wrapper {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.content__skills-page--skill__img,
+.content__skills-page--framework__img,
+.content__skills-page--development_tool__img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Projects Page */
+.content__projects-page {
+  padding: 0 var(--space-4);
+}
+
+.content__projects-page--project__wrapper {
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.content__projects-page--project {
+  padding: var(--space-6);
+}
+
+.content__projects-page--project__title {
+  font-size: var(--font-size-lg);
+}
+
+.content__projects-page--project__description {
+  font-size: var(--font-size-sm);
+}
+
+.tech-stack-tags {
+  gap: var(--space-1);
+}
+
+.tech-tag {
+  font-size: 0.7rem;
+  padding: var(--space-1) var(--space-2);
+}
+
+/* Contact Page */
+.content__contact-page {
+  padding: 0 var(--space-4);
+}
+
+/* Experience Page */
+.content__experience-page {
+  padding: 0 var(--space-4);
+}
+
+.content__experience-page--timeline {
+  max-width: 100%;
+}
+
+.content__experience-page--timeline::before {
+  left: 16px;
+}
+
+.content__experience-page--card {
+  margin-left: 36px;
+}
+
+.content__experience-page--card::before {
+  left: -22px;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+}
+
+.content__experience-page--company-badge {
+  top: 12px;
+  left: 12px;
+  font-size: 0.65rem;
+  padding: var(--space-1) var(--space-2);
+  box-shadow: var(--shadow-sm);
+}
+
+.content__experience-page--position {
+  font-size: var(--font-size-xl);
+}
+
+.content__experience-page--tags,
+.content__experience-page--highlights {
+  padding: var(--space-3) var(--space-4);
+}
+
+.content__experience-page--card-header {
+  padding: var(--space-6) var(--space-4) var(--space-3);
+}
+
+.content__experience-page--meta {
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.content__contact-page--information__wrapper {
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.content__contact-page--contact__wrapper {
+  padding: var(--space-6);
+}
+
+.content__contact-page--contact:nth-child(3)
+  .content__contact-page--contact__input {
+  min-height: 100px;
+}
+
+/* ============================================
+   SM (>= 640px)
+   ============================================ */
+
+@media (min-width: 640px) {
+  .introduction__my-name {
+    font-size: var(--font-size-5xl);
+  }
+
+  .text-copy {
+    font-size: 4em;
+  }
+
+  .content__skills-page--skill__wrapper,
+  .content__skills-page--framework__wrapper,
+  .content__skills-page--development_tool__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ============================================
+   MD (>= 768px) - Tablet
+   ============================================ */
+
+@media (min-width: 768px) {
+  /* Hero Section */
+  .about-content {
+    padding: var(--space-8) var(--space-10);
+  }
+
+  .about-intro {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about-body {
+    font-size: var(--font-size-lg);
+  }
+
+  .text-copy {
+    font-size: 5.5em;
+  }
+  .introduction__greeting {
+    font-size: var(--font-size-xl);
+  }
+
+  .introduction__my-name {
+    font-size: var(--font-size-5xl);
+  }
+
+  .introduction__my-major {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Sidebar - Desktop Navigation */
+  .side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    bottom: auto;
+    border-right: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0;
+    padding: var(--space-10) var(--space-4);
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+  }
+
+  .side-bar__avatar--wrapper {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin-bottom: var(--space-4);
+  }
+
+  .side-bar__name {
+    display: block;
+    font-size: var(--font-size-lg);
+  }
+
+  .side-bar__fields {
+    display: block;
+  }
+
+  .side-bar__menu {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--space-1);
+  }
+
+  .side-bar__menu li {
+    margin-bottom: var(--space-2);
+  }
+
+  .side-bar__menu--item {
+    flex-direction: row;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-base);
+  }
+
+  .side-bar__menu--item span {
+    display: inline;
+  }
+
+  /* Content Area */
+  .content {
+    margin-left: 240px;
+    margin-bottom: 0;
+    width: calc(100% - 240px);
+  }
+
+  /* Skills Page */
+  .content__skills-page--skill__wrapper,
+  .content__skills-page--framework__wrapper,
+  .content__skills-page--development_tool__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Contact Page */
+  .content__contact-page--information__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .social-links a,
+  .introduction__links a {
+    width: 52px;
+    height: 52px;
+  }
+
+  .social-links a .fa-brands,
+  .introduction__links a .fa-brands {
+    font-size: 1.6rem;
+  }
+}
+
+/* ============================================
+   LG (>= 1024px) - Desktop
+   ============================================ */
+
+@media (min-width: 1024px) {
+  /* Sidebar */
+  .side-bar {
+    width: var(--width-sidebar);
+  }
+
+  .text-copy {
+    font-size: 6em;
+  }
+
+  .side-bar__avatar--wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .side-bar__name {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Content Area */
+  .content {
+    margin-left: var(--width-sidebar);
+    width: calc(100% - var(--width-sidebar));
+  }
+
+  /* Hero Section */
+  .introduction__my-name {
+    font-size: var(--font-size-6xl);
+  }
+
+  /* Page Titles */
+  .content__page--title {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+@media (max-width: 639px) {
+  .experience-badge {
+    top: -16px;
+    left: 16px;
+    gap: 8px;
+    flex-wrap: wrap; /* allow wrapping on very small screens */
+  }
+
+  .experience-badge__company {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+
+  .experience-badge__role {
+    font-size: 0.95rem;
+    padding: 5px 10px;
+  }
+
+  .content__experience-page--card {
+    padding-top: 24px;
+  }
+  .about-content {
+    padding: var(--space-5) var(--space-4);
+    margin: 0 var(--space-3);
+    border-radius: var(--radius-lg);
+  }
+
+  .about-intro {
+    font-size: var(--font-size-lg);
+    text-align: center;
+  }
+
+  .about-body {
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    padding-left: var(--space-5);
+    text-align: left;
+  }
+
+  .about-cta {
+    font-size: var(--font-size-base);
+  }
+  .social-links a,
+  .introduction__links a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .social-links a .fa-brands,
+  .introduction__links a .fa-brands {
+    font-size: 1.35rem;
+  }
+
+  .social-links--content {
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .introduction,
+  .side-bar,
+  .content__page--contact,
+  .content__contact-page--contact__wrapper,
+  .fa-brands {
+    display: none !important;
+  }
+
+  .content__experience-page,
+  .content__experience-page--card {
+    page-break-inside: avoid;
+  }
+
+  .content {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .content__page {
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+}
+
+/* ============================================
+   PREFERS REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (Future)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  /* Currently not implemented, but ready for future dark mode */
+  /* Uncomment when ready to implement */
+  /*
+    :root {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --border-color: #334155;
+        --border-dark: #475569;
+    }
+    */
+}

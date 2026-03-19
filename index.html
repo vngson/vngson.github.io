@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,25 +15,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <script defer src="./assets/fontawesome-free-6.4.2-web/js/all.js"></script>
 </head>
+
 <body>
     <div class="app">
         <div class="introduction">
             <h2 class="introduction__greeting">Hello World!</h2>
-            <h1 class="introduction__my-name">I'm Vo Ngoc Son.</h1>
+            <h1 class="introduction__my-name">I'm Son Vo Ngoc.</h1>
             <span class="introduction__my-major">| Software engineer |</span>
-            <button class="introduction__see-more" onclick="setTimeout(handleClickSeeMore, 500)">
+            <button class="introduction__see-more glow-hover" onclick="setTimeout(handleClickSeeMore, 500)">
                 More about me
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
             <div class="introduction__links">
-                <a href="https://www.facebook.com/sons.vos.52" class="introduction__links--facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.youtube.com/@sownvox" class="introduction__links--youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://github.com/vngson" class="introduction__links--github" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://twitter.com/sown_vox" class="introduction__links--twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.instagram.com/_sownvox/" class="introduction__links--instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/sons.vos.52" class="introduction__links--facebook" target="_blank"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@sownvox" class="introduction__links--youtube" target="_blank"><i
+                        class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/vngson" class="introduction__links--github" target="_blank"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com/sown_vox" class="introduction__links--twitter" target="_blank"><i
+                        class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_sownvox/" class="introduction__links--instagram" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
         <div class="more-information">
@@ -45,81 +53,151 @@
                         <span class="side-bar__avatar--border-bottom"></span>
                         <span class="side-bar__avatar--border-left"></span>
                     </div>
-                    <h3 class="side-bar__name">Vo Ngoc Son</h3>
+                    <h3 class="side-bar__name">Son Vo Ngoc</h3>
                     <div class="side-bar__fields">Software engineer</div>
                     <ul class="side-bar__menu">
                         <li><a href="#home" class="side-bar__menu--item">
-                            <i class="fa-solid fa-house"></i>
-                            Home
-                        </a></li>
+                                <i class="fa-solid fa-house"></i>
+                                Home
+                            </a></li>
                         <li><a href="#about" class="side-bar__menu--item">
-                            <i class="fa-solid fa-user"></i>
-                            About Me
-                        </a></li>
+                                <i class="fa-solid fa-user"></i>
+                                About
+                            </a></li>
                         <li><a href="#skills" class="side-bar__menu--item">
-                            <i class="fa-solid fa-earth-asia"></i>
-                            Skills
-                        </a></li>
+                                <i class="fa-solid fa-earth-asia"></i>
+                                Skills
+                            </a></li>
+                        <li><a href="#experience" class="side-bar__menu--item">
+                                <i class="fa-solid fa-briefcase"></i>
+                                Experience
+                            </a></li>
                         <li><a href="#projects" class="side-bar__menu--item">
-                            <i class="fa-solid fa-diagram-project"></i>
-                            Projects
-                        </a></li>
+                                <i class="fa-solid fa-diagram-project"></i>
+                                Projects
+                            </a></li>
                         <li><a href="#contact" class="side-bar__menu--item">
-                            <i class="fa-solid fa-phone"></i>
-                            Contact
-                        </a></li>
+                                <i class="fa-solid fa-phone"></i>
+                                Contact
+                            </a></li>
                     </ul>
                 </div>
                 <div class="content">
                     <div class="content__container">
                         <div class="content__home-page content__page" id="home">
-                            <svg class="content__home-page--full-name__wrapper">
+                            <div class="bg-gradient-orbs">
+                                <div class="orb orb-1"></div>
+                                <div class="orb orb-2"></div>
+                                <div class="orb orb-3"></div>
+                            </div>
+                            <canvas class="neural-mesh" id="neural-mesh"></canvas>
+                            <div class="particles-container" id="particles"></div>
+                            <svg class="content__home-page--full-name__wrapper" viewBox="0 0 650 160"
+                                preserveAspectRatio="xMidYMid meet">
                                 <symbol class="content__home-page--full-name" id="s-text">
-                                <text text-anchor="middle" x="50%" y="80%">Vo Ngoc Son</text>
+                                    <text text-anchor="middle" x="325" y="120">Son Vo Ngoc</text>
                                 </symbol>
-                            
-                                <g class = "g-ants">
-                                <use xlink:href="#s-text" class="text-copy"></use>
-                                <use xlink:href="#s-text" class="text-copy"></use>
-                                <use xlink:href="#s-text" class="text-copy"></use>
-                                <use xlink:href="#s-text" class="text-copy"></use>
-                                <use xlink:href="#s-text" class="text-copy"></use>
+
+                                <g class="g-ants">
+                                    <use xlink:href="#s-text" class="text-copy"></use>
+                                    <use xlink:href="#s-text" class="text-copy"></use>
+                                    <use xlink:href="#s-text" class="text-copy"></use>
+                                    <use xlink:href="#s-text" class="text-copy"></use>
+                                    <use xlink:href="#s-text" class="text-copy"></use>
                                 </g>
                             </svg>
-                            <span class="content__home-page--introduction">I'm a software engineer.</span>
-                            <a  href="./assets/[CV] - Vo Ngoc Son.pdf" class="content__home-page--btn-download-cv" download>
+                            <div class="typing-container reveal">
+                                <span class="typing-text">I'm a <span id="typing-role" class="typing-role"></span><span
+                                        class="typing-cursor">|</span></span>
+                            </div>
+                            <div class="role-badges reveal">
+                                <span class="role-badge">
+                                    <i class="fa-solid fa-code"></i>
+                                    <span>Web Dev</span>
+                                </span>
+                                <span class="role-badge">
+                                    <i class="fa-solid fa-desktop"></i>
+                                    <span>Desktop</span>
+                                </span>
+                                <span class="role-badge">
+                                    <i class="fa-solid fa-robot"></i>
+                                    <span>Automation</span>
+                                </span>
+                                <span class="role-badge">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    <span>Mobile</span>
+                                </span>
+                            </div>
+                            <a href="./assets/[CV] - Vo Ngoc Son.pdf"
+                                class="content__home-page--btn-download-cv glow-hover reveal" download>
                                 Download CV
                                 <i class="fa-solid fa-circle-arrow-down"></i>
-                            </a>                     
+                            </a>
                         </div>
                         <div class="content__about-page content__page" id="about">
-                            <h2 class="content__page--title">WHO AM I?</h2>
-                            <span class="content__about-page--information">Hello, my name is Vo Ngoc Son. I graduated from University of Science - VNUHCM with a degree in Information Systems. I am pursuing the field of web development. Currently and in the future, I hope to find a good environment to develop and improve my skills. In addition, I also want to create more relationships to support my work in the future.</span>
-                            <span class="content__about-page--information">I have some big projects coming up, all information about them will be published on this website. Follow them. If you want to cooperate with me please contact me via the <a href="#contact" class="contact__link">
-                                Contact
-                            </a> section.</span>
-                            <div class="content__page--contact">
-                                <a href="https://www.facebook.com/sons.vos.52" class="introduction__links--facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="https://www.youtube.com/@sownvox" class="introduction__links--youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                                <a href="https://github.com/vngson" class="introduction__links--github" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                <a href="https://twitter.com/sown_vox" class="introduction__links--twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="https://www.instagram.com/_sownvox/" class="introduction__links--instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <h2 class="content__page--title reveal">WHO AM I?</h2>
+
+                            <div class="about-content reveal">
+                                <p class="about-intro">
+                                    I'm <span class="highlight-name">Son Vo Ngoc</span>, a Software Engineer focused on
+                                    building scalable web, desktop, and automation systems.
+                                </p>
+
+                                <p class="about-body">
+                                    I work across modern stacks like <strong>React, Next.js, and TypeScript</strong>,
+                                    combined with backend and automation using <strong>Python (Flask) and .NET
+                                        (WPF)</strong>.
+                                </p>
+
+                                <p class="about-body">
+                                    My strength lies in turning complex business problems into clean, maintainable
+                                    solutions — from UI/UX to system workflows.
+                                </p>
+
+                                <div class="about-cta">
+                                    <span>Have a project or idea?</span>
+                                    <a href="#contact" class="about-contact-link">Let's talk →</a>
+                                </div>
+                            </div>
+                            <div class="content__page--contact social-links social-links--content">
+                                <a href="https://www.facebook.com/sons.vos.52" class="introduction__links--facebook"
+                                    target="_blank" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@sownvox" class="introduction__links--youtube"
+                                    target="_blank" aria-label="YouTube">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="https://github.com/vngson" class="introduction__links--github" target="_blank"
+                                    aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://twitter.com/sown_vox" class="introduction__links--twitter"
+                                    target="_blank" aria-label="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="https://www.instagram.com/_sownvox/" class="introduction__links--instagram"
+                                    target="_blank" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
                             </div>
                         </div>
                         <div class="content__skills-page content__page" id="skills">
-                            <h2 class="content__page--title">Technical skills</h2>
-                            <h3 class="content__skills-page--skill-title">Languages</h3>
+                            <h2 class="content__page--title reveal">Technical skills</h2>
+                            <h3 class="content__skills-page--skill-title reveal">Languages</h3>
                             <div class="content__skills-page--skill__wrapper">
                                 <!-- <div class="content__skills-page--skill">
                                     <img src="/assets/images/figma.png" alt="figma" class="content__skills-page--skill__img">
                                     <h4 class="content__skills-page--skill__title">Figma</h4>
                                 </div> -->
                                 <div class="content__skills-page--skill">
-                                    <img src="/assets/images/html.png" alt="html" class="content__skills-page--skill__img">
+                                    <img src="/assets/images/html.png" alt="html"
+                                        class="content__skills-page--skill__img">
                                     <h4 class="content__skills-page--skill__title">HTML</h4>
                                 </div>
                                 <div class="content__skills-page--skill">
-                                    <img src="/assets/images/css.png" alt="css" class="content__skills-page--skill__img">
+                                    <img src="/assets/images/css.png" alt="css"
+                                        class="content__skills-page--skill__img">
                                     <h4 class="content__skills-page--skill__title">CSS</h4>
                                 </div>
                                 <div class="content__skills-page--skill">
@@ -127,162 +205,377 @@
                                     <h4 class="content__skills-page--skill__title">Javascript</h4>
                                 </div>
                                 <div class="content__skills-page--skill">
-                                    <img src="/assets/images/Typescript.png" alt="ts" class="content__skills-page--skill__img">
+                                    <img src="/assets/images/Typescript.png" alt="ts"
+                                        class="content__skills-page--skill__img">
                                     <h4 class="content__skills-page--skill__title">Typescript</h4>
                                 </div>
                                 <div class="content__skills-page--skill">
-                                    <img src="/assets/images/PHP.png" alt="php" class="content__skills-page--skill__img">
+                                    <img src="/assets/images/PHP.png" alt="php"
+                                        class="content__skills-page--skill__img">
                                     <h4 class="content__skills-page--skill__title">PHP</h4>
                                 </div>
                                 <div class="content__skills-page--skill">
-                                    <img src="/assets/images/Python.png" alt="python" class="content__skills-page--skill__img">
+                                    <img src="/assets/images/Python.png" alt="python"
+                                        class="content__skills-page--skill__img">
                                     <h4 class="content__skills-page--skill__title">Python</h4>
                                 </div>
                                 <div class="content__skills-page--skill">
-                                    <img src="/assets/images/c-plus-plus.png" alt="figma" class="content__skills-page--skill__img">
+                                    <img src="/assets/images/c-plus-plus.png" alt="figma"
+                                        class="content__skills-page--skill__img">
                                     <h4 class="content__skills-page--skill__title">C++</h4>
                                 </div>
                                 <div class="content__skills-page--skill">
-                                    <img src="/assets/images/c-sharp.png" alt="c-sharp" class="content__skills-page--skill__img">
+                                    <img src="/assets/images/c-sharp.png" alt="c-sharp"
+                                        class="content__skills-page--skill__img">
                                     <h4 class="content__skills-page--skill__title">C#</h4>
                                 </div>
                                 <div class="content__skills-page--skill">
-                                    <img src="/assets/images/Dart.png" alt="dart" class="content__skills-page--skill__img">
+                                    <img src="/assets/images/Dart.png" alt="dart"
+                                        class="content__skills-page--skill__img">
                                     <h4 class="content__skills-page--skill__title">Dart</h4>
                                 </div>
                             </div>
-                            <h3 class="content__skills-page--framework-title">Frameworks</h3>
+                            <h3 class="content__skills-page--framework-title reveal">Frameworks</h3>
                             <div class="content__skills-page--framework__wrapper">
                                 <div class="content__skills-page--framework">
-                                    <img src="/assets/images/physics.png" alt="react" class="content__skills-page--framework__img">
+                                    <img src="/assets/images/physics.png" alt="react"
+                                        class="content__skills-page--framework__img">
                                     <h4 class="content__skills-page--framework__title">React</h4>
                                 </div>
                                 <div class="content__skills-page--framework">
-                                    <img src="/assets/images/angular.png" alt="angular" class="content__skills-page--framework__img">
+                                    <img src="/assets/images/angular.png" alt="angular"
+                                        class="content__skills-page--framework__img">
                                     <h4 class="content__skills-page--framework__title">Angular</h4>
                                 </div>
                                 <div class="content__skills-page--framework">
-                                    <img src="/assets/images/nextjs-icon.png" alt="nextjs" class="content__skills-page--framework__img">
+                                    <img src="/assets/images/nextjs-icon.png" alt="nextjs"
+                                        class="content__skills-page--framework__img">
                                     <h4 class="content__skills-page--framework__title">Nextjs</h4>
                                 </div>
                                 <div class="content__skills-page--framework">
-                                    <img src="/assets/images/express.png" alt="expressjs" class="content__skills-page--framework__img">
+                                    <img src="/assets/images/express.png" alt="expressjs"
+                                        class="content__skills-page--framework__img">
                                     <h4 class="content__skills-page--framework__title">Expressjs</h4>
                                 </div>
                                 <div class="content__skills-page--framework">
-                                    <img src="/assets/images/Tailwind.png" alt="tailwind" class="content__skills-page--framework__img">
+                                    <img src="/assets/images/Tailwind.png" alt="tailwind"
+                                        class="content__skills-page--framework__img">
                                     <h4 class="content__skills-page--framework__title">Tailwind</h4>
                                 </div>
                                 <div class="content__skills-page--framework">
-                                    <img src="/assets/images/winforms.png" alt="winforms" class="content__skills-page--framework__img">
+                                    <img src="/assets/images/winforms.png" alt="winforms"
+                                        class="content__skills-page--framework__img">
                                     <h4 class="content__skills-page--framework__title">Winforms/WPF</h4>
                                 </div>
                                 <div class="content__skills-page--framework">
-                                    <img src="/assets/images/flutter.png" alt="flutter" class="content__skills-page--framework__img">
+                                    <img src="/assets/images/flutter.png" alt="flutter"
+                                        class="content__skills-page--framework__img">
                                     <h4 class="content__skills-page--framework__title">Flutter</h4>
                                 </div>
-                            </div> 
-                            <h3 class="content__skills-page--development_tool-title">Development tools</h3>
+                            </div>
+                            <h3 class="content__skills-page--development_tool-title reveal">Development tools</h3>
                             <div class="content__skills-page--development_tool__wrapper">
                                 <div class="content__skills-page--development_tool">
-                                    <img src="/assets/images/GitHub.png" alt="github" class="content__skills-page--development_tool__img">
+                                    <img src="/assets/images/GitHub.png" alt="github"
+                                        class="content__skills-page--development_tool__img">
                                     <h4 class="content__skills-page--development_tool__title">Github</h4>
                                 </div>
                                 <div class="content__skills-page--development_tool">
-                                    <img src="/assets/images/Postman.png" alt="postman" class="content__skills-page--development_tool__img">
+                                    <img src="/assets/images/Postman.png" alt="postman"
+                                        class="content__skills-page--development_tool__img">
                                     <h4 class="content__skills-page--development_tool__title">Postman</h4>
                                 </div>
                                 <div class="content__skills-page--development_tool">
-                                    <img src="/assets/images/MSS.png" alt="Mss" class="content__skills-page--development_tool__img">
+                                    <img src="/assets/images/MSS.png" alt="Mss"
+                                        class="content__skills-page--development_tool__img">
                                     <h4 class="content__skills-page--development_tool__title">Microsoft SQL Server</h4>
                                 </div>
                                 <div class="content__skills-page--development_tool">
-                                    <img src="/assets/images/vs.png" alt="vs" class="content__skills-page--development_tool__img">
+                                    <img src="/assets/images/vs.png" alt="vs"
+                                        class="content__skills-page--development_tool__img">
                                     <h4 class="content__skills-page--development_tool__title">Visual studio</h4>
                                 </div>
                                 <div class="content__skills-page--development_tool">
-                                    <img src="/assets/images/vsc.png" alt="vsc" class="content__skills-page--development_tool__img">
+                                    <img src="/assets/images/vsc.png" alt="vsc"
+                                        class="content__skills-page--development_tool__img">
                                     <h4 class="content__skills-page--development_tool__title">Visual studio code</h4>
                                 </div>
                                 <div class="content__skills-page--development_tool">
-                                    <img src="/assets/images/mongodb.png" alt="mongodbcompass" class="content__skills-page--development_tool__img">
+                                    <img src="/assets/images/mongodb.png" alt="mongodbcompass"
+                                        class="content__skills-page--development_tool__img">
                                     <h4 class="content__skills-page--development_tool__title">Mongodb compass</h4>
                                 </div>
                                 <div class="content__skills-page--development_tool">
-                                    <img src="/assets/images/figma.png" alt="figma" class="content__skills-page--development_tool__img">
+                                    <img src="/assets/images/figma.png" alt="figma"
+                                        class="content__skills-page--development_tool__img">
                                     <h4 class="content__skills-page--development_tool__title">Figma</h4>
                                 </div>
-                            </div>                  
+                            </div>
+                        </div>
+                        <div class="content__experience-page content__page" id="experience">
+                            <h2 class="content__page--title reveal">Work Experience</h2>
+                            <div class="content__experience-page--timeline">
+                                <div class="content__experience-page--card">
+                                    <div class="experience-badge">
+                                        <div class="experience-badge__company">
+                                            <span class="experience-badge__logo">AIPOWER</span>
+                                        </div>
+                                        <div class="experience-badge__role">Software Engineer</div>
+                                    </div>
+                                    <div class="content__experience-page--card-header">
+                                        <div>
+                                            <h3 class="content__experience-page--position">Software Engineer</h3>
+                                            <div class="content__experience-page--meta">
+                                                <span class="content__experience-page--date"><i
+                                                        class="fa-regular fa-calendar"></i> Feb 2025 - Present</span>
+                                                <span class="content__experience-page--progression"><i
+                                                        class="fa-solid fa-arrow-trend-up"></i> Intern →
+                                                    Full-time</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content__experience-page--tags">
+                                        <span class="content__experience-page--tag">Flutter</span>
+                                        <span class="content__experience-page--tag">C# / WPF</span>
+                                        <span class="content__experience-page--tag">Python / Flask</span>
+                                        <span class="content__experience-page--tag">JS / Next.js</span>
+                                        <span class="content__experience-page--tag">Supabase</span>
+                                        <span class="content__experience-page--tag">Agile</span>
+                                    </div>
+                                    <div class="content__experience-page--highlights">
+                                        <div class="content__experience-page--highlight">
+                                            <i class="fa-solid fa-mobile-screen"></i>
+                                            <span>Flutter Mobile App - UI & feature development</span>
+                                        </div>
+                                        <div class="content__experience-page--highlight">
+                                            <i class="fa-solid fa-robot"></i>
+                                            <span>Automation Tool - PythonRPA + Flask + WPF</span>
+                                        </div>
+                                        <div class="content__experience-page--highlight">
+                                            <i class="fa-solid fa-desktop"></i>
+                                            <span>Desktop App - C# WPF modules</span>
+                                        </div>
+                                        <div class="content__experience-page--highlight">
+                                            <i class="fa-solid fa-globe"></i>
+                                            <span>Web App - Next.js + Supabase</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="content__projects-page content__page" id="projects">
-                            <h2 class="content__page--title">My projects</h2>
-                            <div class="row content__projects-page--project__wrapper">
-                                <div class="col l-5 c-12 m-12 content__projects-page--project">
-                                    <span class="content__projects-page--project__title">OMRP - One million reward points</span>
-                                    <iframe src="https://www.youtube.com/embed/sO8MLwzLCzE" frameborder="0" class="content__projects-page--project__video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a href="https://github.com/vngson/OMRP.git" class="content__projects-page--project__view-details" target="_blank">View details</a>
+                            <h2 class="content__page--title reveal">My projects</h2>
+                            <div class="content__projects-page--project__wrapper">
+                                <div class="content__projects-page--project reveal">
+                                    <div class="project__header">
+                                        <h3 class="content__projects-page--project__title">One Million Reward Points
+                                        </h3>
+                                        <div class="project__emoji">🔥</div>
+                                    </div>
+                                    <p class="content__projects-page--project__description">
+                                        A reward platform that lets users redeem points for gifts across partner stores,
+                                        boosting engagement and loyalty.
+                                    </p>
+                                    <div class="content__projects-page--project__tech-stack">
+                                        <span class="tech-stack-label">Tech stack:</span>
+                                        <div class="tech-stack-tags">
+                                            <span class="tech-tag">Next.js</span>
+                                            <span class="tech-tag">Express.js</span>
+                                            <span class="tech-tag">PostgreSQL</span>
+                                            <span class="tech-tag">TypeScript</span>
+                                        </div>
+                                    </div>
+                                    <div class="content__projects-page--project__highlights">
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-bolt"></i>
+                                            <span>Architected and developed a responsive web application with a focus on
+                                                performance and usability</span>
+                                        </div>
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-gauge-high"></i>
+                                            <span>Optimized frontend performance, achieving 30% faster load times</span>
+                                        </div>
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-users"></i>
+                                            <span>Designed user-centric redemption flows to enhance engagement and
+                                                usability</span>
+                                        </div>
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-sitemap"></i>
+                                            <span>Collaborated on system structure and UI/UX to ensure scalability and
+                                                maintainability</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://github.com/vngson/OMRP.git"
+                                        class="content__projects-page--project__view-details" target="_blank">
+                                        View on GitHub
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
                                 </div>
-                                <div class="col l-5 c-12 m-12 content__projects-page--project">
-                                    <span class="content__projects-page--project__title">Vticket</span>
-                                    <iframe src="https://youtube.com/embed/EV56W73CZTM" frameborder="0" class="content__projects-page--project__video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a href="https://github.com/vngson/vticket-web.git" class="content__projects-page--project__view-details" target="_blank">View details</a>
+                                <div class="content__projects-page--project reveal">
+                                    <div class="project__header">
+                                        <h3 class="content__projects-page--project__title">VTicket</h3>
+                                        <div class="project__emoji">🔥</div>
+                                    </div>
+                                    <p class="content__projects-page--project__description">
+                                        A full-featured event ticketing platform that allows users to discover, book,
+                                        and manage event tickets with real-time data handling.
+                                    </p>
+                                    <div class="content__projects-page--project__tech-stack">
+                                        <span class="tech-stack-label">Tech stack:</span>
+                                        <div class="tech-stack-tags">
+                                            <span class="tech-tag">React.js</span>
+                                            <span class="tech-tag">Node.js</span>
+                                            <span class="tech-tag">Django</span>
+                                            <span class="tech-tag">PostgreSQL</span>
+                                            <span class="tech-tag">MongoDB</span>
+                                            <span class="tech-tag">Redis</span>
+                                            <span class="tech-tag">Firebase</span>
+                                        </div>
+                                    </div>
+                                    <div class="content__projects-page--project__highlights">
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-layer-group"></i>
+                                            <span>Built a scalable frontend architecture and integrated multiple backend
+                                                services</span>
+                                        </div>
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-bolt"></i>
+                                            <span>Implemented real-time data handling to improve responsiveness and user
+                                                experience</span>
+                                        </div>
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-gauge-high"></i>
+                                            <span>Reduced application load time by 25% through performance
+                                                optimizations</span>
+                                        </div>
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-pen-ruler"></i>
+                                            <span>Designed intuitive user flows and wireframes to streamline ticket
+                                                booking experience</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://github.com/vngson/vticket-web.git"
+                                        class="content__projects-page--project__view-details" target="_blank">
+                                        View on GitHub
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
                                 </div>
-                                <!-- <div class="col l-5 c-12 m-12 content__projects-page--project">
-                                    <span class="content__projects-page--project__title">OMRP - One million reward points</span>
-                                    <iframe src="https://www.youtube.com/embed/sO8MLwzLCzE" frameborder="0" class="content__projects-page--project__video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <a href="https://github.com/vngson/OMRP.git" class="content__projects-page--project__view-details" target="_blank">View details</a>
-                                </div> -->
+                                <div class="content__projects-page--project reveal">
+                                    <div class="project__header">
+                                        <h3 class="content__projects-page--project__title">BlockHouse</h3>
+                                        <div class="project__emoji">🔥</div>
+                                    </div>
+                                    <p class="content__projects-page--project__description">
+                                        A full-stack desktop app for salons to track revenue, analyze staff performance,
+                                        and manage operations efficiently.
+                                    </p>
+                                    <div class="content__projects-page--project__tech-stack">
+                                        <span class="tech-stack-label">Tech stack:</span>
+                                        <div class="tech-stack-tags">
+                                            <span class="tech-tag">C#</span>
+                                            <span class="tech-tag">WPF (MVVM)</span>
+                                            <span class="tech-tag">Python</span>
+                                            <span class="tech-tag">Flask</span>
+                                            <span class="tech-tag">SQLite</span>
+                                        </div>
+                                    </div>
+                                    <div class="content__projects-page--project__highlights">
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-code"></i>
+                                            <span>Architected and built the entire system independently (frontend,
+                                                backend, and database)</span>
+                                        </div>
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-project-diagram"></i>
+                                            <span>Applied MVVM pattern to ensure clean, maintainable, and scalable UI
+                                                architecture</span>
+                                        </div>
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-chart-line"></i>
+                                            <span>Designed a data-driven dashboard featuring top-performing employees
+                                                and revenue analytics</span>
+                                        </div>
+                                        <div class="project__highlight">
+                                            <i class="fa-solid fa-cogs"></i>
+                                            <span>Developed core management modules for employees, services, and revenue
+                                                tracking</span>
+                                        </div>
+                                    </div>
+                                    <a href="https://github.com/vngson/BlockHouse_FE"
+                                        class="content__projects-page--project__view-details" target="_blank">
+                                        View Project
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="content__contact-page content__page" id="contact">
-                            <h2 class="content__page--title">contact</h2>
+                            <h2 class="content__page--title reveal">contact</h2>
                             <div class="content__contact-page--information__wrapper">
-                                <div class="content__contact-page--information">
-                                    <span class="content__contact-page--information__title">
+                                <div class="contact-info-card">
+                                    <div class="contact-info-card__icon">
                                         <i class="fa-solid fa-location-dot"></i>
-                                        Location
-                                    </span>
-                                    <span class="content__contact-page--information__information">
-                                        Dong commune, KBang district, Gia Lai province.
-                                    </span>
+                                    </div>
+                                    <span class="contact-info-card__label">Location</span>
+                                    <span class="contact-info-card__value">Kông Bơ La, Gia Lai.</span>
                                 </div>
-                                <div class="content__contact-page--information">
-                                    <span class="content__contact-page--information__title">
+                                <div class="contact-info-card">
+                                    <div class="contact-info-card__icon">
                                         <i class="fa-solid fa-envelope"></i>
-                                        Email
-                                    </span>
-                                    <span class="content__contact-page--information__information">
-                                        Sonvo1611@gmail.com
-                                    </span>
+                                    </div>
+                                    <span class="contact-info-card__label">Email</span>
+                                    <span class="contact-info-card__value">sonvo1611@gmail.com</span>
                                 </div>
-                                <div class="content__contact-page--information">
-                                    <span class="content__contact-page--information__title">
+
+                                <!-- Card Phone -->
+                                <div class="contact-info-card">
+                                    <div class="contact-info-card__icon">
                                         <i class="fa-solid fa-phone"></i>
-                                        Phone number
-                                    </span>
-                                    <span class="content__contact-page--information__information">
-                                        0375087078
-                                    </span>
+                                    </div>
+                                    <span class="contact-info-card__label">Phone number</span>
+                                    <span class="contact-info-card__value">0375087078</span>
                                 </div>
+
                             </div>
-                            <div class="content__page--contact">
-                                <a href="https://www.facebook.com/sons.vos.52" class="introduction__links--facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="https://www.youtube.com/@sownvox" class="introduction__links--youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                                <a href="https://github.com/vngson" class="introduction__links--github" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                <a href="https://twitter.com/sown_vox" class="introduction__links--twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="https://www.instagram.com/_sownvox/" class="introduction__links--instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <div class="content__page--contact social-links social-links--content">
+                                <a href="https://www.facebook.com/sons.vos.52" class="introduction__links--facebook"
+                                    target="_blank" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@sownvox" class="introduction__links--youtube"
+                                    target="_blank" aria-label="YouTube">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                                <a href="https://github.com/vngson" class="introduction__links--github" target="_blank"
+                                    aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://twitter.com/sown_vox" class="introduction__links--twitter"
+                                    target="_blank" aria-label="Twitter">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a href="https://www.instagram.com/_sownvox/" class="introduction__links--instagram"
+                                    target="_blank" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
                             </div>
                             <form method="post" class="content__contact-page--contact__wrapper">
+
+  <h3 class="content__contact-page--contact__wrapper-title">Send a message</h3>
                                 <div class="content__contact-page--contact">
-                                    <input name="from_name" id="from_name" type="text" class="content__contact-page--contact__input" placeholder="">
+                                    <input name="from_name" id="from_name" type="text"
+                                        class="content__contact-page--contact__input" placeholder="">
                                     <label for="from_name" class="content__contact-page--contact__title">Name</label>
                                 </div>
                                 <div class="content__contact-page--contact">
-                                    <input name="email" id="email" type="text" class="content__contact-page--contact__input" placeholder="">
+                                    <input name="email" id="email" type="text"
+                                        class="content__contact-page--contact__input" placeholder="">
                                     <label for="email" class="content__contact-page--contact__title">Email</label>
                                 </div>
                                 <div class="content__contact-page--contact">
-                                    <textarea name="message" id="message" cols="30" rows="8" class="content__contact-page--contact__input" placeholder=""></textarea>
+                                    <textarea name="message" id="message" cols="30" rows="8"
+                                        class="content__contact-page--contact__input" placeholder=""></textarea>
                                     <label for="message" class="content__contact-page--contact__title">Message</label>
                                 </div>
                                 <button type="submit" class="content__contact-page--contact__submit-btn">Submit</button>
@@ -290,27 +583,32 @@
                         </div>
                     </div>
                 </div>
+        </div>
+    <script src="./assets/js/contact-form.js"></script>
+    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
+    </div>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/php/main.php"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        (function(){
+        (function () {
             emailjs.init("seNx6PC9PHybrMy8s");
         })();
     </script>
     <script>
-        document.querySelector(".content__contact-page--contact__wrapper").addEventListener("submit", function(event) {
+        document.querySelector(".content__contact-page--contact__wrapper").addEventListener("submit", function (event) {
             event.preventDefault(); // Ngăn chặn load lại trang
-        
+
             // Lấy dữ liệu từ form
             let from_name = document.getElementById("from_name").value;
             let email = document.getElementById("email").value;
             let message = document.getElementById("message").value;
-        
+
             // Cấu hình dữ liệu gửi đi
             let templateParams = {
                 to_name: 'Son vo',
@@ -318,28 +616,27 @@
                 email: email,
                 message: message
             };
-        
+
             // Gửi email thông qua EmailJS
             emailjs.send("service_3ccz0h4", "template_z3dt439", templateParams)
-            .then(function(response) {
-                alert("Email sent successfully!");
-                console.log("SUCCESS!", response.status, response.text);
-                // Reload sau 2 giây
-                setTimeout(function() {
-                    location.reload();
-                }, 2000);
-            }, function(error) {
-                alert("Failed to send email!");
-                console.log("FAILED...", error);
+                .then(function (response) {
+                    alert("Email sent successfully!");
+                    console.log("SUCCESS!", response.status, response.text);
+                    // Reload sau 2 giây
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000);
+                }, function (error) {
+                    alert("Failed to send email!");
+                    console.log("FAILED...", error);
 
-                // Reload sau 2 giây
-                setTimeout(function() {
-                    location.reload();
-                }, 2000);
-            });
+                    // Reload sau 2 giây
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000);
+                });
         });
     </script>
 </body>
+
 </html>
-
-
