@@ -57,6 +57,13 @@
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.theme-toggle {
+  position: absolute;
+  bottom: var(--space-20);
+  right: 0;
+  left: auto;
+}
+
 .side-bar__avatar--wrapper,
 .side-bar__name,
 .side-bar__fields {
@@ -322,6 +329,14 @@
 
   .introduction__my-major {
     font-size: var(--font-size-xl);
+  }
+
+  .theme-toggle {
+    position: absolute;
+    bottom: var(--space-6);
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /* Sidebar - Desktop Navigation */

@@ -34,17 +34,6 @@
   --secondary-500: #6366f1;
   --secondary-600: #4f46e5;
 
-  /* Colors - Background */
-  --bg-primary: #fafafa;
-  --bg-secondary: #ffffff;
-  --bg-tertiary: #f3f4f6;
-
-  /* Colors - Text */
-  --text-primary: #1f2937;
-  --text-secondary: #4b5563;
-  --text-muted: #9ca3af;
-  --text-light: #ffffff;
-
   /* Colors - Border */
   --border-color: #e5e7eb;
   --border-dark: #d1d5db;
@@ -114,4 +103,65 @@
   /* Layout */
   --width-sidebar: 280px;
   --max-content: 1200px;
+
+  /* Theme Icon Colors */
+  --theme-icon-sun: #fbbf24;
+  --theme-icon-moon: #6366f1;
+}
+
+/* ============================================
+   LIGHT THEME (Default)
+   ============================================ */
+
+:root,
+[data-theme="light"] {
+  /* Colors - Background */
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f3f4f6;
+
+  /* Colors - Text */
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --text-light: #ffffff;
+
+  /* Introduction Background */
+  --intro-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  --intro-greeting-color: var(--primary-400);
+  --intro-name-text: #ffffff;
+  --intro-major-text: #ffffff;
+
+  /* Button Colors */
+  --btn-primary-bg: #1f2937;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #0ea5e9;
+}
+
+/* ============================================
+   DARK THEME
+   ============================================ */
+
+[data-theme="dark"] {
+  /* Colors - Background */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #1e293b;
+
+  /* Colors - Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+
+  /* Introduction Background */
+  --intro-bg: linear-gradient(135deg, #020617 0%, #0f172a 50%, #020617 100%);
+  --intro-greeting-color: var(--primary-300);
+  --intro-name-text: #f1f5f9;
+  --intro-major-text: #cbd5e1;
+
+  /* Button Colors */
+  --btn-primary-bg: #1f2937;
+  --btn-primary-text: #ffffff;
+  --btn-primary-hover: #38bdf8;
 }

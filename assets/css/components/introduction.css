@@ -12,7 +12,8 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  background: var(--intro-bg);
+  transition: background var(--transition-slow);
 }
 
 /* Dynamic Gradient Overlay */
@@ -63,7 +64,7 @@
   font-size: var(--font-size-4xl);
   font-weight: 600;
   letter-spacing: 0.6em;
-  color: var(--primary-400);
+  color: var(--intro-greeting-color);
   text-transform: uppercase;
   margin-bottom: var(--space-4);
   position: relative;
@@ -93,14 +94,14 @@
 .introduction__my-name {
   font-size: var(--font-size-6xl);
   font-weight: 700;
-  color: var(--text-light);
+  color: var(--intro-name-text);
   margin-bottom: var(--space-3);
   letter-spacing: -0.02em;
   position: relative;
   z-index: 1;
   animation: fadeInUp 0.6s ease 0.2s both;
   text-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
-  background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 50%, #ffffff 100%);
+  background: linear-gradient(135deg, var(--intro-name-text) 0%, var(--primary-200) 50%, var(--intro-name-text) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -108,6 +109,7 @@
   animation:
     fadeInUp 0.6s ease 0.2s both,
     shimmer 3s linear infinite;
+  transition: color var(--transition-slow), background var(--transition-slow);
 }
 
 @keyframes shimmer {
@@ -122,12 +124,13 @@
 .introduction__my-major {
   font-size: var(--font-size-2xl);
   font-weight: 500;
-  color: var(--text-light);
+  color: var(--intro-major-text);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: var(--space-8);
   opacity: 0.95;
   animation: fadeInUp 0.6s ease 0.4s both;
+  transition: color var(--transition-slow);
 }
 
 /* Introduction Social Links */

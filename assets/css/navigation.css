@@ -95,3 +95,46 @@
   letter-spacing: 0.05em;
   margin-bottom: var(--space-10);
 }
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+
+.theme-toggle {
+  position: absolute;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.theme-toggle:hover {
+  background-color: var(--primary-100);
+  color: var(--primary-500);
+  border-color: var(--primary-300);
+  transform: translateX(-50%) scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+.theme-toggle .fa-moon {
+  color: var(--theme-icon-moon);
+}
+
+.theme-toggle .fa-sun {
+  color: var(--theme-icon-sun);
+}
+

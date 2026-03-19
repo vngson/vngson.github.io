@@ -176,8 +176,9 @@
   padding: var(--space-3) var(--space-6);
   font-size: var(--font-size-sm);
   font-weight: 600;
-  background-color: var(--text-primary);
-  color: var(--text-light);
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: 2px solid var(--primary-400);
   border-radius: var(--radius-2xl);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -187,7 +188,8 @@
 }
 
 .content__projects-page--project__view-details:hover {
-  background-color: var(--primary-400);
+  background-color: var(--btn-primary-hover);
+  border-color: var(--btn-primary-hover);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }

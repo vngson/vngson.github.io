@@ -128,7 +128,7 @@
 }
 
 .experience-badge__role {
-  background: white;
+  background: var(--bg-primary);
   color: var(--text-primary);
   font-size: 1.1rem;
   font-weight: 700;

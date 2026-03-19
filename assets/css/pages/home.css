@@ -25,7 +25,7 @@
       rgba(14, 165, 233, 0.1) 0%,
       transparent 40%
     ),
-    linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    var(--intro-bg);
   background-size:
     600px 600px,
     500px 500px,
@@ -41,6 +41,7 @@
   position: relative;
   overflow: hidden;
   animation: gradientShift 20s ease-in-out infinite alternate;
+  transition: background var(--transition-slow);
 }
 
 @keyframes gradientShift {
@@ -238,9 +239,10 @@
 
 .typing-text {
   font-size: var(--font-size-2xl);
-  color: #f1f5f9;
+  color: var(--text-secondary);
   font-weight: 500;
   text-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  transition: color var(--transition-slow);
 }
 
 .typing-role {
