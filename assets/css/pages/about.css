@@ -1,0 +1,178 @@
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+.content__about-page {
+  width: 100%;
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content__about-page--information {
+  font-size: var(--font-size-4xl);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: 720px;
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.contact__link {
+  color: var(--primary-400);
+  font-weight: 500;
+}
+
+.contact__link:hover {
+  color: var(--primary-500);
+  text-decoration: underline;
+}
+
+.content__page--contact {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-10);
+}
+
+.content__page--contact a {
+  font-size: var(--font-size-2xl);
+}
+
+/* ABOUT SECTION - ENHANCED */
+.about-content {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+  background: linear-gradient(
+    145deg,
+    rgba(14, 165, 233, 0.03) 0%,
+    rgba(99, 102, 241, 0.03) 100%
+  );
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(14, 165, 233, 0.08);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.about-content:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.about-intro {
+  font-size: var(--font-size-xl);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.highlight-name {
+  background: linear-gradient(90deg, var(--primary-400), var(--secondary-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.about-body {
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-5);
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+.about-body::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary-400);
+  font-weight: 600;
+}
+
+.about-cta {
+  margin-top: var(--space-8);
+  text-align: center;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.about-contact-link {
+  display: inline-block;
+  margin-left: var(--space-3);
+  color: var(--primary-400);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all var(--transition-base);
+}
+
+.about-contact-link:hover {
+  color: var(--primary-500);
+  transform: translateX(6px);
+}
+
+.about-contact-link::after {
+  content: "↗";
+  margin-left: var(--space-2);
+  font-size: var(--font-size-base);
+}
+
+/* SOCIAL LINKS – COMMON BASE */
+.social-links {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+/* Hero version */
+.introduction__links {
+  position: absolute;
+  bottom: var(--space-10);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeIn 0.8s ease 0.6s both;
+}
+
+/* Content pages version (About, Contact, etc.) */
+.social-links--content {
+  margin: var(--space-8) auto 0;
+  padding: var(--space-4) 0;
+}
+
+/* Common item style  */
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  color: var(--primary-400);
+  background-color: var(--primary-100);
+  backdrop-filter: blur(4px);
+}
+
+.social-links a svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-links a .fa-brands {
+  font-size: 1.5rem;
+  color: var(--primary-400);
+}
+
+/* Hover chung – giống hệt nhau */
+.social-links a:hover,
+.introduction__links a:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  color: #ffffff;
+}

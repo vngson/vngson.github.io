@@ -1,0 +1,344 @@
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+
+.content__contact-page {
+  width: 100%;
+  max-width: var(--max-content);
+  margin: 0 auto var(--space-5) auto;
+  padding: 0 var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content__contact-page .content__page--contact {
+  margin-bottom: var(--space-8);
+}
+
+.content__contact-page--information__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  /* margin-bottom: var(--space-12); */
+  width: 100%;
+  max-width: 800px;
+}
+
+.content__contact-page--information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-6);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.content__contact-page--information__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--primary-400);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.content__contact-page--information__information {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+}
+
+.contact-info-card {
+  position: relative;
+  background-color: var(--bg-secondary);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all var(--transition-base);
+  overflow: visible; /* cho phép label float lên trên border */
+}
+
+.contact-info-card:hover {
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Floating Label - nằm trên border giống input */
+.contact-info-card__label {
+  position: absolute;
+  top: -12px; /* nhô lên trên border card */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-secondary);
+  color: var(--primary-400);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: 0 var(--space-3);
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color var(--transition-fast);
+}
+
+.contact-info-card:hover .contact-info-card__label {
+  color: var(--primary-500);
+}
+
+/* Icon */
+.contact-info-card__icon {
+  font-size: 1.5rem;
+  color: var(--primary-400);
+  margin-bottom: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+/* Value text */
+.contact-info-card__value {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+
+.content__contact-page--contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: 600px;
+
+  /* Glassmorphism dark card */
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.85) 0%,
+    rgba(30, 41, 59, 0.9) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: var(--space-10) var(--space-8);
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow accent góc trên trái */
+.content__contact-page--contact__wrapper::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.15) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glow accent góc dưới phải */
+.content__contact-page--contact__wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Form title */
+.content__contact-page--contact__wrapper-title {
+  text-align: center;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-2);
+  position: relative;
+  z-index: 1;
+}
+
+/* Divider dưới title */
+.content__contact-page--contact__wrapper-title::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin: var(--space-3) auto 0;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  border-radius: var(--radius-full);
+}
+
+.content__contact-page--contact {
+  position: relative;
+  z-index: 1;
+}
+
+/* Input & Textarea */
+.content__contact-page--contact__input {
+  width: 100%;
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--font-size-base);
+  font-family: inherit;
+  color: #f1f5f9;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  outline: none;
+}
+
+.content__contact-page--contact__input::placeholder {
+  color: transparent;
+}
+
+.content__contact-page--contact__input:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.content__contact-page--contact__input:focus {
+  border-color: var(--primary-400);
+  background-color: rgba(14, 165, 233, 0.05);
+  box-shadow:
+    0 0 0 3px rgba(14, 165, 233, 0.12),
+    0 0 20px rgba(14, 165, 233, 0.08);
+}
+
+/* Textarea */
+.content__contact-page--contact:nth-child(3)
+  .content__contact-page--contact__input {
+  min-height: 140px;
+  resize: vertical;
+  line-height: var(--leading-relaxed);
+}
+
+.content__contact-page--contact__input::-webkit-resizer {
+  display: none;
+}
+
+.content__contact-page--contact__input::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Floating Label */
+.content__contact-page--contact__title {
+  position: absolute;
+  left: var(--space-5);
+  top: var(--space-4);
+  font-size: var(--font-size-base);
+  color: rgba(148, 163, 184, 0.8);
+  pointer-events: none;
+  transition: all var(--transition-base);
+  background-color: transparent;
+  padding: 0;
+}
+
+.content__contact-page--contact__input:focus
+  + .content__contact-page--contact__title,
+.content__contact-page--contact__input:not(:placeholder-shown)
+  + .content__contact-page--contact__title {
+  transform: translateY(-28px) scale(0.82);
+  left: var(--space-4);
+  color: var(--primary-400);
+  background: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(30, 41, 59, 0.95)
+  );
+  padding: 0 var(--space-2);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Submit Button */
+.content__contact-page--contact__submit-btn {
+  width: 100%;
+  padding: var(--space-4);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    135deg,
+    var(--primary-400) 0%,
+    var(--secondary-500) 100%
+  );
+  color: var(--text-light);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  margin-top: var(--space-2);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Shimmer effect trên button */
+.content__contact-page--contact__submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.content__contact-page--contact__submit-btn:hover::before {
+  left: 100%;
+}
+
+.content__contact-page--contact__submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 25px rgba(14, 165, 233, 0.4),
+    0 0 0 1px rgba(14, 165, 233, 0.2);
+}
+
+.content__contact-page--contact__submit-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.content__contact-page--contact__submit-btn:focus-visible {
+  outline: 2px solid var(--primary-400);
+  outline-offset: 3px;
+}

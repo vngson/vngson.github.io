@@ -1,0 +1,81 @@
+/* ============================================
+   SKILLS PAGE
+   ============================================ */
+
+.content__skills-page {
+  width: 100%;
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+.content__skills-page--skill-title,
+.content__skills-page--framework-title,
+.content__skills-page--development_tool-title {
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin: var(--space-12) 0 var(--space-8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: linear-gradient(
+    135deg,
+    var(--primary-400) 0%,
+    var(--secondary-500) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.content__skills-page--skill__wrapper,
+.content__skills-page--framework__wrapper,
+.content__skills-page--development_tool__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+  justify-items: center;
+}
+
+.content__skills-page--skill,
+.content__skills-page--framework,
+.content__skills-page--development_tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  padding: var(--space-6);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.content__skills-page--skill:hover,
+.content__skills-page--framework:hover,
+.content__skills-page--development_tool:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-200);
+}
+
+.content__skills-page--skill__img,
+.content__skills-page--framework__img,
+.content__skills-page--development_tool__img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: var(--space-3);
+}
+
+.content__skills-page--skill__title,
+.content__skills-page--framework__title,
+.content__skills-page--development_tool__title {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: var(--leading-tight);
+}
