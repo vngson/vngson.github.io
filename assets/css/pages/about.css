@@ -169,7 +169,7 @@
   color: var(--primary-400);
 }
 
-/* Hover chung – giống hệt nhau */
+/* Common hover – identical for all */
 .social-links a:hover,
 .introduction__links a:hover {
   transform: translateY(-4px);

@@ -1,23 +1,23 @@
-// Lấy button buttonSeeMore và các thẻ introduction, moreInformation
+// Get buttonSeeMore and tags introduction, moreInformation
 var buttonSeeMore = document.querySelector(".introduction__see-more");
 var introduction = document.querySelector(".introduction");
 var moreInformation = document.querySelector(".more-information");
 
 var handleClickSeeMore = function () {
-    // Ẩn thẻ A bằng cách đặt display là none
+    // Hide tag A by setting display to none
     introduction.style.display = "none";
-    // Hiển thị thẻ B bằng cách đặt display là block
+    // Show tag B by setting display to block
     moreInformation.style.display = "flex";
 }
 
-// Hàm gửi email
+// Email sending function
 // function sendEmail() {
-//   // Lấy dữ liệu từ các ô nhập liệu
+//   // Get data from input fields
 //   var nameInput = document.getElementsByName("name")[0].value;
 //   var emailInput = document.getElementsByName("email")[0].value;
 //   var messageInput = document.getElementsByName("message")[0].value;
 
-//   // Thiết lập thông tin SMTP
+//   // Set up SMTP information
 //   const smtpConfig = {
 //     host: "smtp.gmail.com",
 //     port: 587,
@@ -25,36 +25,36 @@ var handleClickSeeMore = function () {
 //     password: "Sonkb12102002",
 //   };
 
-//   // Tạo đối tượng Email
+//   // Create Email object
 //   const emailObj = new Email({
 //     from: "sonvo1611@gmail.com",
 //     to: "sonvo1611@gmail.com",
-//     subject: "Thông báo từ trang web",
+//     subject: "Notification from website",
 //     message: `
-//       Tên: ${nameInput}
+//       Name: ${nameInput}
 //       Email: ${emailInput}
-//       Nội dung: ${messageInput}
+//       Content: ${messageInput}
 //     `,
 //   });
 
-//   // Gửi email
+//   // Send email
 //   emailObj.send(smtpConfig);
 
-//   // Tạo đối tượng Email xác nhận
+//   // Create confirmation Email object
 //   const emailObjConfirm = new Email({
 //     from: "sonvo1611@gmail.com",
 //     to: emailInput,
-//     subject: "Xác nhận nhận được message",
+//     subject: "Message received confirmation",
 //     message: `
-//       Chào bạn,
+//       Hello,
 
-//       Chúng tôi đã nhận được message của bạn. Chúng tôi sẽ phản hồi sớm nhất có thể.
+//       We have received your message. We will respond as soon as possible.
 
-//       Cảm ơn bạn!
+//       Thank you!
 //     `,
 //   });
 
-//   // Gửi email xác nhận
+//   // Send confirmation email
 //   emailObjConfirm.send(smtpConfig);
 // }
 
@@ -79,52 +79,52 @@ var handleClickSeeMore = function () {
 //     });
 // }
 
-// Lấy ra các phần tử cần xử lý
+// Get elements to process
 const sections = document.querySelectorAll(".content__page");
 const navItems = document.querySelectorAll(".side-bar__menu--item");
 
-// Hàm để kiểm tra một phần tử có nằm trong phạm vi nhìn thấy hay không
+// Function to check if an element is within the visible viewport
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
   const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  // Thay đổi điều kiện để trả về true khi top hoặc bottom nằm trong khoảng từ 0 đến chiều cao của window
+  // Change condition to return true when top or bottom is within window height
   return (
     (rect.top >= 0 && rect.top <= windowHeight) ||
     (rect.bottom >= 0 && rect.bottom <= windowHeight)
   );
 }
 
-// Hàm để xử lý khi scroll
+// Function to handle scroll
 function handleScroll() {
-  // Khai báo một biến để lưu trữ chỉ số của phần tử section đầu tiên được nhìn thấy
+  // Declare a variable to store the index of the first visible section
   let visibleIndex = -1;
-  // Duyệt qua các phần tử section
+  // Iterate through section elements
   sections.forEach((section, index) => {
-    // Kiểm tra phần tử section có nằm trong phạm vi nhìn thấy hay không
+    // Check if section is within visible viewport
     if (isInViewport(section)) {
-      // Nếu có, gán chỉ số của phần tử section cho biến visibleIndex
+      // If yes, assign section index to visibleIndex
       visibleIndex = index;
-      // Dừng vòng lặp
+      // Stop loop
       return;
     }
   });
-  // Nếu có phần tử section được nhìn thấy
+  // If there is a visible section
   if (visibleIndex !== -1) {
-    // Duyệt qua các nav item
+    // Iterate through nav items
     navItems.forEach((navItem, index) => {
-      // Nếu chỉ số của nav item bằng với chỉ số của phần tử section được nhìn thấy
+      // If nav item index equals visible section index
       if (index === visibleIndex) {
-        // Thêm class active cho nav item
+        // Add active class to nav item
         navItem.classList.add("active");
       } else {
-        // Nếu không, xoá class active cho nav item
+        // Otherwise, remove active class from nav item
         navItem.classList.remove("active");
       }
     });
   }
 }
 
-// Thêm sự kiện scroll cho window và gọi hàm handleScroll
+// Add scroll event to window and call handleScroll
 // window.addEventListener("scroll", handleScroll);
 
 // ============================================

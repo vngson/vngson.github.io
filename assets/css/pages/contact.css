@@ -63,7 +63,7 @@
   align-items: center;
   text-align: center;
   transition: all var(--transition-base);
-  overflow: visible; /* cho phép label float lên trên border */
+  overflow: visible; /* allow label to float above border */
 }
 
 .contact-info-card:hover {
@@ -72,10 +72,10 @@
   transform: translateY(-3px);
 }
 
-/* Floating Label - nằm trên border giống input */
+/* Floating Label - sits above border like input */
 .contact-info-card__label {
   position: absolute;
-  top: -12px; /* nhô lên trên border card */
+  top: -12px; /* pop up above card border */
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--bg-secondary);
@@ -138,7 +138,7 @@
   overflow: hidden;
 }
 
-/* Glow accent góc trên trái */
+/* Glow accent top left corner */
 .content__contact-page--contact__wrapper::before {
   content: "";
   position: absolute;
@@ -155,7 +155,7 @@
   z-index: 0;
 }
 
-/* Glow accent góc dưới phải */
+/* Glow accent bottom right corner */
 .content__contact-page--contact__wrapper::after {
   content: "";
   position: absolute;
@@ -188,7 +188,7 @@
   z-index: 1;
 }
 
-/* Divider dưới title */
+/* Divider below title */
 .content__contact-page--contact__wrapper-title::after {
   content: "";
   display: block;
@@ -305,7 +305,7 @@
   overflow: hidden;
 }
 
-/* Shimmer effect trên button */
+/* Shimmer effect on button */
 .content__contact-page--contact__submit-btn::before {
   content: "";
   position: absolute;

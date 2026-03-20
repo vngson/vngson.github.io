@@ -1,12 +1,12 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Lấy dữ liệu từ biểu mẫu
+        // Get data from form
         $name = $_POST['user_name'];
         $email = $_POST['email'];
         $message = $_POST['message'];
 
-        // Gửi email
-        $to = "sonvo@gmail.com"; // Thay bằng địa chỉ email của bạn
+        // Send email
+        $to = "sonvo@gmail.com"; // Replace with your email address
         $subject = "New Contact Form Submission";
         $body = "Name: $name\nEmail: $email\nMessage: $message";
 

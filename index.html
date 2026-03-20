@@ -82,7 +82,8 @@
                             </a></li>
                     </ul>
                     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                        <i class="fa-solid fa-moon"></i>
+                        <i class="theme-light-icon fa-solid fa-moon"></i>
+                        <i class="theme-dark-icon fa-solid fa-sun"></i>
                     </button>
                 </div>
                 <div class="content">
@@ -599,7 +600,7 @@
     </div>
     </div>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/php/main.php"></script>
+    <!-- <script src="./assets/php/main.php"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function () {
@@ -608,14 +609,20 @@
     </script>
     <script>
         document.querySelector(".content__contact-page--contact__wrapper").addEventListener("submit", function (event) {
-            event.preventDefault(); // Ngăn chặn load lại trang
+            event.preventDefault(); // Prevent page reload
 
-            // Lấy dữ liệu từ form
-            let from_name = document.getElementById("from_name").value;
-            let email = document.getElementById("email").value;
-            let message = document.getElementById("message").value;
+            // Get data from form
+            let from_name = document.getElementById("from_name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let message = document.getElementById("message").value.trim();
 
-            // Cấu hình dữ liệu gửi đi
+            // Validate form
+            if (!from_name || !email || !message) {
+                alert("Please complete all required fields: Name, Email, and Message.");
+                return;
+            }
+
+            // Configure data to send
             let templateParams = {
                 to_name: 'Son vo',
                 from_name: from_name,
@@ -623,23 +630,26 @@
                 message: message
             };
 
-            // Gửi email thông qua EmailJS
+            // Send email via EmailJS
             emailjs.send("service_3ccz0h4", "template_z3dt439", templateParams)
                 .then(function (response) {
                     alert("Email sent successfully!");
                     console.log("SUCCESS!", response.status, response.text);
-                    // Reload sau 2 giây
+
+                    // Clear form after 2 seconds
                     setTimeout(function () {
-                        location.reload();
+                        // Clear form
+                        document.querySelector(".content__contact-page--contact__wrapper").reset();
                     }, 2000);
                 }, function (error) {
                     alert("Failed to send email!");
                     console.log("FAILED...", error);
 
-                    // Reload sau 2 giây
+                    // Clear form after 5 seconds
                     setTimeout(function () {
-                        location.reload();
-                    }, 2000);
+                        // Clear form
+                        document.querySelector(".content__contact-page--contact__wrapper").reset();
+                    }, 5000);
                 });
         });
     </script>
