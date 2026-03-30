@@ -1,7 +1,8 @@
 /* ============================================
-   HOME PAGE
+   HOME PAGE - CYBERPUNK STYLE
    ============================================ */
 
+/* Cyberpunk Background */
 .content__home-page {
   display: flex;
   flex-direction: column;
@@ -12,20 +13,20 @@
   background:
     radial-gradient(
       circle at 20% 30%,
-      rgba(14, 165, 233, 0.15) 0%,
+      rgba(0, 229, 255, 0.08) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 80% 20%,
-      rgba(99, 102, 241, 0.12) 0%,
+      rgba(255, 0, 128, 0.06) 0%,
       transparent 50%
     ),
     radial-gradient(
       circle at 40% 80%,
-      rgba(14, 165, 233, 0.1) 0%,
+      rgba(0, 229, 255, 0.05) 0%,
       transparent 40%
     ),
-    var(--intro-bg);
+    #0a0a0f;
   background-size:
     600px 600px,
     500px 500px,
@@ -42,6 +43,42 @@
   overflow: hidden;
   animation: gradientShift 20s ease-in-out infinite alternate;
   transition: background var(--transition-slow);
+}
+
+/* Scanline Effect */
+.content__home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 229, 255, 0.01) 2px,
+    rgba(0, 229, 255, 0.01) 4px
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Vignette Effect */
+.content__home-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(10, 10, 15, 0.4) 100%
+  );
+  pointer-events: none;
+  z-index: 6;
 }
 
 @keyframes gradientShift {
@@ -68,7 +105,7 @@
   }
 }
 
-/* Home Page Background Elements */
+/* Background Elements */
 .bg-gradient-orbs {
   position: absolute;
   top: 0;
@@ -84,7 +121,7 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.4;
+  opacity: 0.3;
   animation: orbFloat 15s ease-in-out infinite;
 }
 
@@ -95,7 +132,7 @@
   left: -100px;
   background: radial-gradient(
     circle,
-    rgba(14, 165, 233, 0.3) 0%,
+    rgba(0, 229, 255, 0.2) 0%,
     transparent 70%
   );
   animation-delay: 0s;
@@ -108,7 +145,7 @@
   right: -100px;
   background: radial-gradient(
     circle,
-    rgba(99, 102, 241, 0.25) 0%,
+    rgba(255, 0, 128, 0.15) 0%,
     transparent 70%
   );
   animation-delay: -5s;
@@ -121,7 +158,7 @@
   right: -50px;
   background: radial-gradient(
     circle,
-    rgba(14, 165, 233, 0.2) 0%,
+    rgba(0, 229, 255, 0.15) 0%,
     transparent 70%
   );
   animation-delay: -10s;
@@ -153,7 +190,7 @@
   pointer-events: none;
 }
 
-/* Home Page Particles */
+/* Particles */
 .content__home-page .particles-container {
   position: absolute;
   top: 0;
@@ -169,14 +206,18 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: rgba(14, 165, 233, 0.6);
+  background: rgba(0, 229, 255, 0.5);
   border-radius: 50%;
   pointer-events: none;
 }
 
 .content__home-page .particle:nth-child(odd) {
-  background: rgba(99, 102, 241, 0.6);
+  background: rgba(255, 0, 128, 0.5);
 }
+
+/* ============================================
+   CYBERPUNK GLITCH TEXT EFFECT
+   ============================================ */
 
 .content__home-page--full-name__wrapper {
   width: 100%;
@@ -186,6 +227,196 @@
   z-index: 10;
 }
 
+.cyberpunk-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  color: #00e5ff;
+  text-align: center;
+  /* Neon Glow */
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 20px #00e5ff,
+    0 0 40px #00e5ff,
+    0 0 80px rgba(0, 229, 255, 0.5);
+  animation: textFlicker 3s ease-in-out infinite;
+}
+
+/* Cyan Glitch Layer */
+.cyberpunk-name::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00e5ff;
+  background: #0a0a0f;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 10%,
+    0 10%
+  );
+  animation: glitchCyan 2.5s infinite linear alternate-reverse;
+}
+
+/* Magenta Glitch Layer */
+.cyberpunk-name::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ff0080;
+  background: #0a0a0f;
+  clip-path: polygon(
+    0 15%,
+    100% 15%,
+    100% 25%,
+    0 25%
+  );
+  animation: glitchMagenta 2.5s infinite linear alternate-reverse;
+}
+
+/* Glitch Animation - Cyan Layer */
+@keyframes glitchCyan {
+  0%, 89% {
+    transform: translate(0);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      0 0
+    );
+  }
+  90% {
+    transform: translate(-3px, -2px);
+    clip-path: polygon(
+      0 10%,
+      100% 10%,
+      100% 20%,
+      0 20%
+    );
+  }
+  91% {
+    transform: translate(3px, 2px);
+    clip-path: polygon(
+      0 40%,
+      100% 40%,
+      100% 50%,
+      0 50%
+    );
+  }
+  92% {
+    transform: translate(-2px, 1px);
+    clip-path: polygon(
+      0 70%,
+      100% 70%,
+      100% 80%,
+      0 80%
+    );
+  }
+  93% {
+    transform: translate(2px, -1px);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 5%,
+      0 5%
+    );
+  }
+  100% {
+    transform: translate(0);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      0 0
+    );
+  }
+}
+
+/* Glitch Animation - Magenta Layer */
+@keyframes glitchMagenta {
+  0%, 89% {
+    transform: translate(0);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      0 0
+    );
+  }
+  90% {
+    transform: translate(3px, 2px);
+    clip-path: polygon(
+      0 20%,
+      100% 20%,
+      100% 30%,
+      0 30%
+    );
+  }
+  91% {
+    transform: translate(-3px, -2px);
+    clip-path: polygon(
+      0 50%,
+      100% 50%,
+      100% 60%,
+      0 60%
+    );
+  }
+  92% {
+    transform: translate(2px, -1px);
+    clip-path: polygon(
+      0 80%,
+      100% 80%,
+      100% 90%,
+      0 90%
+    );
+  }
+  93% {
+    transform: translate(-2px, 1px);
+    clip-path: polygon(
+      0 10%,
+      100% 10%,
+      100% 15%,
+      0 15%
+    );
+  }
+  100% {
+    transform: translate(0);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 0,
+      0 0
+    );
+  }
+}
+
+/* Neon Flicker Effect */
+@keyframes textFlicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.8;
+  }
+  19%, 23%, 54%, 56% {
+    opacity: 0.85;
+  }
+}
+
+/* ============================================
+   TYPING ROLE CONTAINER
+   ============================================ */
+
 .typing-container,
 .role-badges,
 .content__home-page--btn-download-cv {
@@ -193,45 +424,6 @@
   z-index: 10;
 }
 
-.text-copy {
-  fill: none;
-  font-size: 8em;
-  stroke: #38bdf8;
-  stroke-dasharray: 6% 29%;
-  stroke-width: 3px;
-  stroke-dashoffset: 0%;
-  animation: stroke-offset 5.5s infinite linear;
-  filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.5));
-}
-
-.text-copy:nth-child(1) {
-  stroke: #0ea5e9;
-  animation-delay: -1s;
-}
-.text-copy:nth-child(2) {
-  stroke: #38bdf8;
-  animation-delay: -2s;
-}
-.text-copy:nth-child(3) {
-  stroke: #7dd3fc;
-  animation-delay: -3s;
-}
-.text-copy:nth-child(4) {
-  stroke: #818cf8;
-  animation-delay: -4s;
-}
-.text-copy:nth-child(5) {
-  stroke: #a5b4fc;
-  animation-delay: -5s;
-}
-
-@keyframes stroke-offset {
-  100% {
-    stroke-dashoffset: -35%;
-  }
-}
-
-/* Typing Animation */
 .typing-container {
   margin-bottom: var(--space-8);
   animation: fadeInUp 0.8s ease 0.5s both;
@@ -239,28 +431,90 @@
 
 .typing-text {
   font-size: var(--font-size-2xl);
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
-  text-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  text-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
   transition: color var(--transition-slow);
 }
 
 .typing-role {
-  background: linear-gradient(90deg, #38bdf8 0%, #818cf8 50%, #6366f1 100%);
+  background: linear-gradient(90deg, #00e5ff 0%, #ff0080 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
   display: inline-block;
   min-width: 180px;
-  filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4));
+  filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.4));
 }
 
 .typing-cursor {
   animation: blink 1s step-end infinite;
-  color: #38bdf8;
+  color: #00e5ff;
   font-weight: 700;
 }
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   ROLE BADGES
+   ============================================ */
+
+.role-badges {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--space-8);
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: var(--radius-md);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+}
+
+.role-badge:hover {
+  background: rgba(0, 229, 255, 0.2);
+  border-color: #00e5ff;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.role-badge i {
+  color: #00e5ff;
+}
+
+/* ============================================
+   CYBERPUNK DOWNLOAD CV BUTTON
+   ============================================ */
 
 .content__home-page--btn-download-cv {
   display: inline-flex;
@@ -270,21 +524,20 @@
   font-size: var(--font-size-sm);
   font-weight: 600;
   border-radius: var(--radius-full);
-  background: linear-gradient(
-    135deg,
-    rgba(14, 165, 233, 0.2) 0%,
-    rgba(99, 102, 241, 0.2) 100%
-  );
-  color: #e0f2fe;
+  background: transparent;
+  color: #00e5ff;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border: 1.5px solid rgba(56, 189, 248, 0.5);
+  letter-spacing: 0.1em;
+  border: 2px solid #00e5ff;
   cursor: pointer;
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.3);
+  box-shadow:
+    0 0 10px rgba(0, 229, 255, 0.3),
+    inset 0 0 20px rgba(0, 229, 255, 0.1);
+  font-family: 'Orbitron', sans-serif;
 }
 
 .content__home-page--btn-download-cv::before {
@@ -297,7 +550,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(224, 242, 254, 0.5),
+    rgba(0, 229, 255, 0.5),
     transparent
   );
   transition: left 0.6s ease;
@@ -308,13 +561,24 @@
 }
 
 .content__home-page--btn-download-cv:hover {
-  background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+  background: rgba(0, 229, 255, 0.1);
   color: #ffffff;
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.5);
-  border-color: transparent;
+  box-shadow:
+    0 0 20px rgba(0, 229, 255, 0.5),
+    0 0 40px rgba(0, 229, 255, 0.3),
+    inset 0 0 30px rgba(0, 229, 255, 0.2);
+  text-shadow: 0 0 10px #00e5ff;
 }
 
 .content__home-page--btn-download-cv:active {
   transform: translateY(-2px) scale(1.02);
+}
+
+.content__home-page--btn-download-cv i {
+  transition: transform var(--transition-base);
+}
+
+.content__home-page--btn-download-cv:hover i {
+  transform: translateX(4px);
 }
